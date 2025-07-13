@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Important Message</title>
+  <title>Special Message</title>
   <style>
     html, body {
       margin: 0;
@@ -12,16 +12,36 @@
       overflow: hidden;
       height: 100%;
     }
-
     video {
       width: 100vw;
       height: 100vh;
       object-fit: cover;
-      pointer-events: none; /* يمنع أي تفاعل مع الفيديو */
+      pointer-events: none;
     }
-
-    ::-webkit-media-controls {
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: transparent;
+      z-index: 9999;
+    }
+    /* Hide controls in Webkit browsers */
+    video::-webkit-media-controls {
       display: none !important;
+      opacity: 0;
+      pointer-events: none;
+    }
+    video::-webkit-media-controls-enclosure {
+      display: none !important;
+      opacity: 0;
+      pointer-events: none;
+    }
+    video::-webkit-media-controls-panel {
+      display: none !important;
+      opacity: 0;
+      pointer-events: none;
     }
   </style>
 </head>
@@ -30,5 +50,6 @@
     <source src="rickroll.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
+  <div class="overlay"></div>
 </body>
 </html>
