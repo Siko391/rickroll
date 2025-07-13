@@ -3,31 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Important Message</title>
+  <title>Rickroll</title>
   <style>
-    html, body {
+    body {
       margin: 0;
-      padding: 0;
       background: black;
       overflow: hidden;
-      height: 100%;
     }
-
     video {
       width: 100vw;
       height: 100vh;
       object-fit: cover;
-      pointer-events: none; /* يمنع أي تفاعل مع الفيديو */
-    }
-
-    ::-webkit-media-controls {
-      display: none !important;
     }
   </style>
 </head>
 <body>
-  <video autoplay loop muted playsinline disablePictureInPicture>
-    <source src="rickroll.mp4" type="video/mp4" />
+  <video autoplay loop muted playsinline>
+    <source src="https://siko391.github.io/rickroll/rickroll.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 </body>
