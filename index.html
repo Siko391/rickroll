@@ -2,54 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Special Message</title>
+  <title>Important</title>
   <style>
     html, body {
       margin: 0;
-      padding: 0;
-      background: black;
-      overflow: hidden;
       height: 100%;
+      overflow: hidden;
     }
-    video {
+    iframe {
+      border: none;
       width: 100vw;
       height: 100vh;
-      object-fit: cover;
-      pointer-events: none;
-    }
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: transparent;
-      z-index: 9999;
-    }
-    /* Hide controls in Webkit browsers */
-    video::-webkit-media-controls {
-      display: none !important;
-      opacity: 0;
-      pointer-events: none;
-    }
-    video::-webkit-media-controls-enclosure {
-      display: none !important;
-      opacity: 0;
-      pointer-events: none;
-    }
-    video::-webkit-media-controls-panel {
-      display: none !important;
-      opacity: 0;
-      pointer-events: none;
     }
   </style>
 </head>
 <body>
-  <video autoplay loop muted playsinline disablePictureInPicture>
-    <source src="rickroll.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-  <div class="overlay"></div>
+  <iframe src="video.html" allow="autoplay"></iframe>
 </body>
 </html>
